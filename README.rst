@@ -13,8 +13,8 @@ Usage
 -----
 
 .. code:: python
-  from minecraft_data.v1_9 import findItemOrBlockByName
-  print(findItemOrBlockByName("stone"))
+    from minecraft_data.v1_9 import findItemOrBlockByName
+    print(findItemOrBlockByName("stone"))
 
 
 Documentation
