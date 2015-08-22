@@ -9,11 +9,12 @@ Installation
 ``python3 setup.py install``
 
 
-Examples
---------
+Usage
+-----
 
 
 
-API Docs
---------
+Documentation
+-------------
 
+- See `doc/api.rst <doc/api.rst>`__
