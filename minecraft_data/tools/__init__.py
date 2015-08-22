@@ -5,7 +5,7 @@ from glob import glob
 
 def convert(dir):
     data = _grabdata(dir)
-    return {
+    ret = {
         'blocks': _byId(data['blocks']),
         'blocksByName': _byName(data['blocks']),
         'blocksArray': data['blocks'],
@@ -21,8 +21,18 @@ def convert(dir):
         'entities': _byId(data['entities']),
         'entitiesByName': _byName(data['entities']),
         'entitiesArray': data['entities'],
-        'protocol': data['protocol']
+        'protocol': data['protocol'],
     }
+    def findItemOrBlockById(id):
+        return findBy(id, ret['items'], ret['blocks'])
+
+    def findItemOrBlockByName(name):
+        return findBy(name, ret['itemsByName'], ret['blocksByName'])
+
+    ret['findItemOrBlockById'] = findItemOrBlockById
+    ret['findItemOrBlockByName'] = findItemOrBlockByName
+
+    return ret
 
 
 def _grabdata(dir):
