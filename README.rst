@@ -1,7 +1,7 @@
 python-minecraft-data
 =====================
 
-Provide easy access to minecraft-data in python
+Provide easy access to `minecraft-data <https://github.com/PrismarineJS/minecraft-data>`__, in python
 
 Installation
 ------------
