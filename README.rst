@@ -18,4 +18,4 @@ See the `example.py <example.py>`__
 Documentation
 -------------
 
-- See `doc/api.rst <doc/api.rst>`__
+- See `doc/api.md <doc/api.md>`__
