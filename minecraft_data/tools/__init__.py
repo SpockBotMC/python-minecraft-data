@@ -28,7 +28,6 @@ def convert(dir):
 def _grabdata(dir):
     data = dict()
     for filename in glob(os.path.join(dir, "data/enums/")+"*.json"):
-        print(filename)
         with open(filename) as fp:
             base = os.path.splitext(os.path.basename(filename))[0]
             doc = json.load(fp)
