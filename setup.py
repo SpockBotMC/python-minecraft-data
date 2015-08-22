@@ -7,7 +7,9 @@ setup(
     description='Provide easy access to minecraft data in python',
     license='MIT',
     long_description=open('README.rst').read(),
-    version='0.0.1',
+    version='0.1.0',
+    maintainer='Romain Beaumont',
+    maintainer_email='romain.rom1@gmail.com',
     url='https://github.com/rom1504/python-minecraft-data',
     packages=find_packages(),
     install_requires=[
