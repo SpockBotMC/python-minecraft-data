@@ -1,8 +1,8 @@
-[submodule "minecraft-data/1.8"]
-	path = minecraft-data/1.8
-	url = https://github.com/PrismarineJS/minecraft-data.git
-	branch = 1.8
-[submodule "minecraft-data/1.9"]
-	path = minecraft-data/1.9
+[submodule "data/1.9"]
+	path = data/1.9
 	url = https://github.com/PrismarineJS/minecraft-data.git
 	branch = 1.9
+[submodule "data/1.8"]
+	path = data/1.8
+	url = https://github.com/PrismarineJS/minecraft-data.git
+	branch = 1.8
