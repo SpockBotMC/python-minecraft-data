@@ -1,0 +1,7 @@
+include *.md
+include *.rst
+include LICENSE
+include MANIFEST.in
+include *.py
+include *.txt
+recursive-include minecraft_data *.json
