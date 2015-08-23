@@ -12,7 +12,7 @@ setup(
     maintainer_email='romain.rom1@gmail.com',
     url='https://github.com/rom1504/python-minecraft-data',
     packages=find_packages(),
-    package_data={'minecraft_data': ["v1_8/data/enums/*.json", "v1_8/data/enums/*.json"]},
+    package_data={'minecraft_data': ["v1_8/data/enums/*.json", "v1_9/data/enums/*.json"]},
     install_requires=[
     ],
     keywords=['minecraft'],
