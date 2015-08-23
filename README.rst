@@ -8,7 +8,7 @@ Provide easy access to `minecraft-data <https://github.com/PrismarineJS/minecraf
 Installation
 ------------
 
-``python3 setup.py install``
+``pip install minecraft_data``
 
 
 Usage
