@@ -22,6 +22,9 @@ def convert(dir):
         'entitiesByName': _byName(data['entities']),
         'entitiesArray': data['entities'],
         'protocol': data['protocol'],
+        'windows': _byId(data['windows']),
+        'windowsByName': _byName(data['windows']),
+        'windowsArray': data['windows'],
     }
     def findItemOrBlockById(id):
         return findBy(id, ret['items'], ret['blocks'])

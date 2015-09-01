@@ -80,6 +80,20 @@ unindexed entities
 
 the minecraft protocol
 
+## Windows
+
+### windows
+
+windows indexed by id
+
+### windowsByName
+
+windows indexed by name
+
+### windowsArray
+
+unindexed windows
+
 ## Functions
 
 ### findItemOrBlockById
