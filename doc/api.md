@@ -6,11 +6,11 @@
 
 blocks indexed by id
 
-### blocksByName
+### blocks_name
 
 blocks indexed by name
 
-### blocksArray
+### blocks_list
 
 unindexed blocks
 
@@ -20,11 +20,11 @@ unindexed blocks
 
 items indexed by id
 
-### itemsByName
+### items_name
 
 items indexed by name
 
-### itemsArray
+### items_list
 
 unindexed items
 
@@ -34,7 +34,7 @@ unindexed items
 
 biomes indexed by id
 
-### biomesArray
+### biomes_list
 
 unindexed biomes
 
@@ -50,7 +50,7 @@ recipes indexed by id
 
 instruments indexed by id
 
-### instrumentsArray
+### instruments_list
 
 unindexed instruments
 
@@ -66,11 +66,11 @@ materials indexed by name
 
 entities indexed by id
 
-### entitiesByName
+### entities_name
 
 entities indexed by name
 
-### entitiesArray
+### entities_list
 
 unindexed entities
 
@@ -86,20 +86,16 @@ the minecraft protocol
 
 windows indexed by id
 
-### windowsByName
+### windows_name
 
 windows indexed by name
 
-### windowsArray
+### windows_list
 
 unindexed windows
 
 ## Functions
 
-### findItemOrBlockById
+### find_item_or_block
 
-find a block or an item by its id
-
-### findItemOrBlockByName
-
-find a block or an item by its name
+find a block or an item by its id or name

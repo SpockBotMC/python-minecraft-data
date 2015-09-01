@@ -6,34 +6,34 @@ from glob import glob
 def convert(dir):
     data = _grabdata(dir)
     ret = {
-        'blocks': _byId(data['blocks']),
-        'blocksByName': _byName(data['blocks']),
-        'blocksArray': data['blocks'],
-        'items': _byId(data['items']),
-        'itemsByName': _byName(data['items']),
-        'itemsArray': data['items'],
-        'biomes': _byId(data['biomes']),
-        'biomesArray': data['biomes'],
+        'blocks': _by_id(data['blocks']),
+        'blocks_name': _by_name(data['blocks']),
+        'blocks_list': data['blocks'],
+        'items': _by_id(data['items']),
+        'items_name': _by_name(data['items']),
+        'items_list': data['items'],
+        'biomes': _by_id(data['biomes']),
+        'biomes_list': data['biomes'],
         'recipes': data['recipes'],
-        'instruments': _byId(data['instruments']),
-        'intrumentsArray': data['instruments'],
+        'instruments': _by_id(data['instruments']),
+        'instruments_list': data['instruments'],
         'materials': data['materials'],
-        'entities': _byId(data['entities']),
-        'entitiesByName': _byName(data['entities']),
-        'entitiesArray': data['entities'],
+        'entities': _by_id(data['entities']),
+        'entities_name': _by_name(data['entities']),
+        'entities_list': data['entities'],
         'protocol': data['protocol'],
-        'windows': _byId(data['windows']),
-        'windowsByName': _byName(data['windows']),
-        'windowsArray': data['windows'],
+        'windows': _by_id(data['windows']),
+        'windows_name': _by_name(data['windows']),
+        'windows_list': data['windows'],
     }
-    def findItemOrBlockById(id):
-        return findBy(id, ret['items'], ret['blocks'])
 
-    def findItemOrBlockByName(name):
-        return findBy(name, ret['itemsByName'], ret['blocksByName'])
+    def find_item_or_block(find):
+        if isinstance(find, int):  # by id
+            return find_by(find, ret['items'], ret['blocks'])
+        else:  # by name
+            return find_by(find, ret['items_name'], ret['blocks_name'])
 
-    ret['findItemOrBlockById'] = findItemOrBlockById
-    ret['findItemOrBlockByName'] = findItemOrBlockByName
+    ret['find_item_or_block'] = find_item_or_block
 
     return ret
 
@@ -48,11 +48,11 @@ def _grabdata(dir):
     return data
 
 
-def _byId(data):
+def _by_id(data):
     return _by('id', data)
 
 
-def _byName(data):
+def _by_name(data):
     return _by('name', data)
 
 
@@ -60,9 +60,8 @@ def _by(key, data):
     return {item[key]: item for item in data}
 
 
-def findBy(key, *args):
+def find_by(key, *args):
     for arg in args:
         if key in arg:
             return arg[key]
     return None
-
