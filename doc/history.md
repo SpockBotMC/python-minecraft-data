@@ -1,3 +1,7 @@
+## 0.2.0
+ * add windows
+ * update protocol schema
+
 ## 0.1.1
  * fix pypi package : include json files
  * add licence file
