@@ -1,3 +1,6 @@
+## 0.3.1
+ * repair README links for pypi
+
 ## 0.3.0
  * changed function names to follow pep8
 
