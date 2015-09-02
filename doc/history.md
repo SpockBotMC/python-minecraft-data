@@ -1,3 +1,6 @@
+## 0.3.0
+ * changed function names to follow pep8
+
 ## 0.2.0
  * add windows
  * update protocol schema
