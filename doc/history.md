@@ -1,3 +1,6 @@
+## 0.3.3
+ * small fix about os.path.join
+
 ## 0.3.2
  * update to new minecraft-data file location
 
