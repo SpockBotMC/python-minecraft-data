@@ -1,3 +1,6 @@
+## 0.3.2
+ * update to new minecraft-data file location
+
 ## 0.3.1
  * repair README links for pypi
 
