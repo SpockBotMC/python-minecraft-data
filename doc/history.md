@@ -1,3 +1,7 @@
+## 0.3.4
+ * fix package_data
+ * update minecraft_data : some item.json fixes
+
 ## 0.3.3
  * small fix about os.path.join
 
