@@ -1,3 +1,11 @@
+## 0.4.0
+ * update minecraft-data
+   * up to date 1.9 blocks, items, recipes
+   * some protocol.json updates
+   * add status effects
+   * add version
+   * fixes in windows.json : fix in brewing stand and add container window
+
 ## 0.3.4
  * fix package_data
  * update minecraft_data : some item.json fixes
