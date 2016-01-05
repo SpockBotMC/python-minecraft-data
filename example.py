@@ -15,3 +15,13 @@ print(windows["minecraft:brewing_stand"])
 from minecraft_data.v1_9 import recipes as recipes2
 
 print(recipes2["5"][0])
+
+
+from minecraft_data.v1_8 import effects_name
+
+print(effects_name["Haste"])
+
+
+from minecraft_data.v1_8 import version
+
+print(version)

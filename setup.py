@@ -10,7 +10,7 @@ setup(
     version='0.3.4',
     maintainer='Romain Beaumont',
     maintainer_email='romain.rom1@gmail.com',
-    url='https://github.com/rom1504/python-minecraft-data',
+    url='https://github.com/SpockBotMC/python-minecraft-data',
     packages=find_packages(),
     package_data={'minecraft_data': ["data/data/*/*.json"]},
     install_requires=[

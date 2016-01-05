@@ -25,6 +25,10 @@ def convert(dir):
         'windows': _by_id(data['windows']),
         'windows_name': _by_name(data['windows']),
         'windows_list': data['windows'],
+        'effects': _by_id(data['effects']),
+        'effects_name': _by_name(data['effects']),
+        'effects_list': data['effects'],
+        'version': data['version']
     }
 
     def find_item_or_block(find):

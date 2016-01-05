@@ -94,6 +94,34 @@ windows indexed by name
 
 unindexed windows
 
+## Effects
+
+### effects
+
+effects indexed by id
+
+### effects_name
+
+effects indexed by name
+
+### effects_list
+
+unindexed effects
+
+## Version
+
+### minecraftVersion
+
+For example 1.8.8
+
+### version
+
+The protocol version, for example 47
+
+### majorVersion
+
+The minecraft-data major version, for example 1.8
+
 ## Functions
 
 ### find_item_or_block
