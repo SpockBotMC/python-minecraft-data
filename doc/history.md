@@ -1,3 +1,8 @@
+## 0.5.0
+ * update minecraft-data
+   * solve the entities.json savegame/protocol ID confusion
+ * remove `entities`, use `mobs` and `objects` instead (they have overlapping IDs)
+
 ## 0.4.0
  * update minecraft-data
    * up to date 1.9 blocks, items, recipes
@@ -32,4 +37,4 @@
 
 ## 0.1.0
  * provide : id-indexed data, name-indexed data, unindexed data and two functions to find items or blocks
- 
+
