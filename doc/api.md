@@ -62,9 +62,13 @@ materials indexed by name
 
 ## Entities
 
-### entities
+### mobs
 
-entities indexed by id
+entities with `type == 'mob'` indexed by id
+
+### objects
+
+entities with `type == 'object'` indexed by id
 
 ### entities_name
 

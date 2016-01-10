@@ -18,7 +18,8 @@ def convert(dir):
         'instruments': _by_id(data['instruments']),
         'instruments_list': data['instruments'],
         'materials': data['materials'],
-        'entities': _by_id(data['entities']),
+        'mobs': _by_id(_filter('type', 'mob', data['entities'])),
+        'objects': _by_id(_filter('type', 'object', data['entities'])),
         'entities_name': _by_name(data['entities']),
         'entities_list': data['entities'],
         'protocol': data['protocol'],
@@ -62,6 +63,10 @@ def _by_name(data):
 
 def _by(key, data):
     return {item[key]: item for item in data}
+
+
+def _filter(key, val, data):
+    return [d for d in data if d[key] == val]
 
 
 def find_by(key, *args):
