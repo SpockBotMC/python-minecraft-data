@@ -1,3 +1,9 @@
+## 0.5.1
+ * update minecraft-data to 2.2.0
+   * still only pc versions are available as imports for now
+   * note that although the file structure of minecraft-data changed, the imports are still `minecraft_data.vX`
+ * add `v1_10`
+
 ## 0.5.0
  * update minecraft-data
    * solve the entities.json savegame/protocol ID confusion
