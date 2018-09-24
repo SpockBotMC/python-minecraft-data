@@ -25,3 +25,7 @@ print(effects_name["Haste"])
 from minecraft_data.v1_8 import version
 
 print(version)
+
+import minecraft_data
+
+print(minecraft_data("1.12").version)
