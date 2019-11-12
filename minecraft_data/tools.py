@@ -3,34 +3,69 @@ import os
 from glob import glob
 
 
-def convert(dir):
-    data = _grabdata(dir)
-    ret = {
-        'blocks': _by_id(data['blocks']),
-        'blocks_name': _by_name(data['blocks']),
-        'blocks_list': data['blocks'],
-        'items': _by_id(data['items']),
-        'items_name': _by_name(data['items']),
-        'items_list': data['items'],
-        'biomes': _by_id(data['biomes']),
-        'biomes_list': data['biomes'],
-        'recipes': data['recipes'],
-        'instruments': _by_id(data['instruments']),
-        'instruments_list': data['instruments'],
-        'materials': data['materials'],
-        'mobs': _by_id(_filter('type', 'mob', data['entities'])),
-        'objects': _by_id(_filter('type', 'object', data['entities'])),
-        'entities_name': _by_name(data['entities']),
-        'entities_list': data['entities'],
-        'protocol': data['protocol'],
-        'windows': _by_id(data['windows']),
-        'windows_name': _by_name(data['windows']),
-        'windows_list': data['windows'],
-        'effects': _by_id(data['effects']),
-        'effects_name': _by_name(data['effects']),
-        'effects_list': data['effects'],
-        'version': data['version']
-    }
+def convert(_dir, version):
+    fp = open(os.path.join(_dir, 'dataPaths.json'))
+    datapaths = json.load(fp)
+    fp.close()
+    data = _grabdata(_dir, datapaths['pc'][version])
+    ret = {}
+    if 'blocks' in data:
+        ret.update({
+            'blocks': _by_id(data['blocks']),
+            'blocks_name': _by_name(data['blocks']),
+            'blocks_list': data['blocks'],
+        })
+    if 'items' in data:
+        ret.update({
+            'items': _by_id(data['items']),
+            'items_name': _by_name(data['items']),
+            'items_list': data['items'],
+        })
+    if 'biomes' in data:
+        ret.update({
+            'biomes': _by_id(data['biomes']),
+            'biomes_list': data['biomes'],
+        })
+    if 'recipes' in data:
+        ret.update({
+            'recipes': data['recipes'],
+        })
+    if 'instruments' in data:
+        ret.update({
+            'instruments': _by_id(data['instruments']),
+            'instruments_list': data['instruments'],
+        })
+    if 'materials' in data:
+        ret.update({
+            'materials': data['materials'],
+        })
+    if 'entities' in data:
+        ret.update({
+            'mobs': _by_id(_filter('type', 'mob', data['entities'])),
+            'objects': _by_id(_filter('type', 'object', data['entities'])),
+            'entities_name': _by_name(data['entities']),
+            'entities_list': data['entities'],
+        })
+    if 'protocol' in data:
+        ret.update({
+            'protocol': data['protocol'],
+        })
+    if 'windows' in data:
+        ret.update({
+            'windows': _by_id(data['windows']),
+            'windows_name': _by_name(data['windows']),
+            'windows_list': data['windows'],
+        })
+    if 'effects' in data:
+        ret.update({
+            'effects': _by_id(data['effects']),
+            'effects_name': _by_name(data['effects']),
+            'effects_list': data['effects'],
+        })
+    if 'version' in data:
+        ret.update({
+            'version': data['version'],
+        })
 
     def find_item_or_block(find):
         if isinstance(find, int):  # by id
@@ -43,13 +78,11 @@ def convert(dir):
     return ret
 
 
-def _grabdata(dir):
-    data = dict()
-    for filename in glob(os.path.join(dir, '*.json')):
-        with open(filename) as fp:
-            base = os.path.splitext(os.path.basename(filename))[0]
-            doc = json.load(fp)
-            data[base] = doc
+def _grabdata(_dir, datapaths):
+    data = {}
+    for category, folder in datapaths.items():
+        with open(os.path.join(_dir, folder, f'{category}.json')) as fp:
+            data[category] = json.load(fp)
     return data
 
 
