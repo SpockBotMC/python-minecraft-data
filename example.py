@@ -1,31 +1,13 @@
-from minecraft_data.v1_8 import find_item_or_block
-
-print(find_item_or_block(1))
-
-print(find_item_or_block("stone"))
-
-from minecraft_data.v1_8 import recipes
-
-print(recipes["5"][0])
-
-from minecraft_data.v1_8 import windows as windows
-
-print(windows["minecraft:brewing_stand"])
-
-from minecraft_data.v1_9 import recipes as recipes2
-
-print(recipes2["5"][0])
-
-
-from minecraft_data.v1_8 import effects_name
-
-print(effects_name["Haste"])
-
-
-from minecraft_data.v1_8 import version
-
-print(version)
-
 import minecraft_data
+mcd = minecraft_data("1.13.2")
 
-print(minecraft_data("1.12").version)
+print(mcd.version)
+
+print(mcd.find_item_or_block(1))
+print(mcd.find_item_or_block('stone'))
+
+print(mcd.recipes['5'][0])
+
+print(mcd.windows['minecraft:brewing_stand'])
+
+print(mcd.effects_name['Haste'])
