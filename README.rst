@@ -8,10 +8,12 @@ Provide easy access to `minecraft-data <https://github.com/PrismarineJS/minecraf
 Installation
 ------------
 From PyPi:
+
 ``pip install minecraft_data``
 
 From Repo:
-``python -m pip install git+https://github.com/SpockBotMC/python-minecraft-data`
+
+``python -m pip install git+https://github.com/SpockBotMC/python-minecraft-data``
 
 Usage
 -----
