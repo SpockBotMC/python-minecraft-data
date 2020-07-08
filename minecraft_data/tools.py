@@ -3,11 +3,11 @@ import os
 from glob import glob
 
 
-def convert(_dir, version):
+def convert(_dir, version, edition ='pc'):
     fp = open(os.path.join(_dir, 'dataPaths.json'))
     datapaths = json.load(fp)
     fp.close()
-    data = _grabdata(_dir, datapaths['pc'][version])
+    data = _grabdata(_dir, datapaths[edition][version])
     ret = {}
     if 'blocks' in data:
         ret.update({
