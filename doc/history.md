@@ -1,3 +1,10 @@
+## 2.62.1
+ * Several changes since project semi-abandonment
+ * Project now uses a more generic approach to adapting minecraft-data schema
+ * Added support for Minecraft PE
+ * Project now tracks with minecraft-data release number
+ * Update minecraft-data to 2.62.1
+
 ## 0.5.1
  * update minecraft-data to 2.2.0
    * still only pc versions are available as imports for now
@@ -43,4 +50,3 @@
 
 ## 0.1.0
  * provide : id-indexed data, name-indexed data, unindexed data and two functions to find items or blocks
-
