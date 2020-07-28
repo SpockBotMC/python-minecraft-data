@@ -1,3 +1,6 @@
+## 2.63.0
+ * Update minecraft-data to 2.63.0
+
 ## 2.62.1
  * Several changes since project semi-abandonment
  * Project now uses a more generic approach to adapting minecraft-data schema
