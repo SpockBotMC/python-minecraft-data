@@ -10,62 +10,44 @@ def convert(_dir, version, edition ='pc'):
     data = _grabdata(_dir, datapaths[edition][version])
     ret = {}
     if 'blocks' in data:
-        ret.update({
-            'blocks': _by_id(data['blocks']),
-            'blocks_name': _by_name(data['blocks']),
-            'blocks_list': data['blocks'],
-        })
+        ret['blocks'] = _by_id(data['blocks'])
+        ret['blocks_name'] = _by_name(data['blocks'])
+        ret['blocks_list'] = data['blocks']
     if 'items' in data:
-        ret.update({
-            'items': _by_id(data['items']),
-            'items_name': _by_name(data['items']),
-            'items_list': data['items'],
-        })
+        ret['items'] = _by_id(data['items'])
+        ret['items_name'] = _by_name(data['items'])
+        ret['items_list'] = data['items']
     if 'biomes' in data:
-        ret.update({
-            'biomes': _by_id(data['biomes']),
-            'biomes_list': data['biomes'],
-        })
+        ret['biomes'] = _by_id(data['biomes'])
+        ret['biomes_list'] = data['biomes']
     if 'recipes' in data:
-        ret.update({
-            'recipes': data['recipes'],
-        })
+        ret['recipes'] = data['recipes']
     if 'instruments' in data:
-        ret.update({
-            'instruments': _by_id(data['instruments']),
-            'instruments_list': data['instruments'],
-        })
+        ret['instruments'] = _by_id(data['instruments'])
+        ret['instruments_list'] = data['instruments']
     if 'materials' in data:
-        ret.update({
-            'materials': data['materials'],
-        })
+        ret['materials'] = data['materials']
     if 'entities' in data:
-        ret.update({
-            'mobs': _by_id(_filter('type', 'mob', data['entities'])),
-            'objects': _by_id(_filter('type', 'object', data['entities'])),
-            'entities_name': _by_name(data['entities']),
-            'entities_list': data['entities'],
-        })
+        ret['mobs'] = _by_id(_filter('type', 'mob', data['entities']))
+        ret['objects'] = _by_id(_filter('type', 'object', data['entities']))
+        ret['entities_name'] = _by_name(data['entities'])
+        ret['entities_list'] = data['entities']
     if 'protocol' in data:
-        ret.update({
-            'protocol': data['protocol'],
-        })
+        ret['protocol'] = data['protocol']
     if 'windows' in data:
-        ret.update({
-            'windows': _by_id(data['windows']),
-            'windows_name': _by_name(data['windows']),
-            'windows_list': data['windows'],
-        })
+        ret['windows'] = _by_id(data['windows'])
+        ret['windows_name'] = _by_name(data['windows'])
+        ret['windows_list'] = data['windows']
     if 'effects' in data:
-        ret.update({
-            'effects': _by_id(data['effects']),
-            'effects_name': _by_name(data['effects']),
-            'effects_list': data['effects'],
-        })
+        ret['effects'] = _by_id(data['effects'])
+        ret['effects_name'] = _by_name(data['effects'])
+        ret['effects_list'] = data['effects']
     if 'version' in data:
-        ret.update({
-            'version': data['version'],
-        })
+        ret['version'] = data['version']
+    if 'particles' in data:
+        ret['particles'] = _by_id(data['particles'])
+        ret['particles_name'] = _by_name(data['particles'])
+        ret['particles_list'] = data['particles']
 
     def find_item_or_block(find):
         if isinstance(find, int):  # by id
