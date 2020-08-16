@@ -1,3 +1,8 @@
+## 2.65.0
+ * Update minecraft-data to 2.65.0
+ * Made the following data accessible: blockCollisionShapes, enchantments, foods, protocolComments, particles
+ * Instruments and biomes now provide _name access
+
 ## 2.64.0
  * Update minecraft-data to 2.64.0
 
