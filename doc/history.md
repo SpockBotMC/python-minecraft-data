@@ -1,3 +1,6 @@
+## 2.67.0
+ * Update minecraft-data to 2.67.0
+
 ## 2.65.0
  * Update minecraft-data to 2.65.0
  * Made the following data accessible: blockCollisionShapes, enchantments, foods, protocolComments, particles
