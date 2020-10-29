@@ -9,7 +9,7 @@ def convert(_dir, version, edition ='pc'):
     data = _grabdata(_dir, datapaths[edition][version])
     ret = {}
     for datum in ('recipes', 'materials', 'protocol', 'version',
-            'blockCollisionShapes', 'protocolComments'):
+            'blockCollisionShapes', 'protocolComments', 'loginPacket'):
         if datum in data:
             ret[datum] = data[datum]
     for datum in ('blocks', 'items', 'windows', 'effects', 'particles',
