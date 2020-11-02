@@ -1,3 +1,6 @@
+## 2.70.0
+ * Update minecraft-data to 2.70.0
+
 ## 2.69.0
  * Update minecraft-data to 2.69.0
  * Added loginPacket data
