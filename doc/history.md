@@ -1,3 +1,6 @@
+## 2.70.1
+ * Update minecraft-data to 2.70.1
+
 ## 2.70.0
  * Update minecraft-data to 2.70.0
 
