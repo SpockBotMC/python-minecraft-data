@@ -9,11 +9,12 @@ def convert(_dir, version, edition ='pc'):
     data = _grabdata(_dir, datapaths[edition][version])
     ret = {}
     for datum in ('recipes', 'materials', 'protocol', 'version',
-            'blockCollisionShapes', 'protocolComments', 'loginPacket'):
+            'blockCollisionShapes', 'protocolComments', 'loginPacket',
+            'commands'):
         if datum in data:
             ret[datum] = data[datum]
     for datum in ('blocks', 'items', 'windows', 'effects', 'particles',
-            'biomes', 'instruments', 'enchantments', 'foods'):
+            'biomes', 'instruments', 'enchantments', 'foods', 'mapIcons'):
         if datum in data:
             ret[datum] = _by_id(data[datum])
             ret[f"{datum}_name"] = _by_name(data[datum])

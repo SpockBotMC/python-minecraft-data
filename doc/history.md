@@ -1,3 +1,7 @@
+## 2.71.0
+ * Update minecraft-data to 2.71.0
+ * Add following data: commands, mapIcons
+
 ## 2.70.1
  * Update minecraft-data to 2.70.1
 
