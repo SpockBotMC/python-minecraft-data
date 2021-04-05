@@ -1,3 +1,7 @@
+## 2.82.2
+ * Update minecraft-data to 2.82.2
+ * Update license file
+
 ## 2.81.0
  * Update minecraft-data to 2.81.0
  * Add following data: tints, blockLoot, entityLoot
