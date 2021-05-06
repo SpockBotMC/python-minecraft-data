@@ -18,3 +18,10 @@ mcd_pe = minecraft_data("1.0", "pe")
 
 print(mcd_pe.version)
 print(mcd_pe.find_item_or_block('stone'))
+
+# Query common data. E.g. to map the protocol version to a minecraft version
+protocol_version = 754 # example protocol version
+for version in minecraft_data.common().protocolVersions:
+    if version["version"] == protocol_version:
+        print(version["minecraftVersion"]) # 1.16.5
+        break

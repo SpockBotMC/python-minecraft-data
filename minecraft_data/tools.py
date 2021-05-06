@@ -41,6 +41,17 @@ def convert(_dir, version, edition ='pc'):
     return ret
 
 
+def commondata(_dir, edition = 'pc'):
+    ret = {}
+    common_path = os.path.join(_dir, edition, 'common')
+    for common_file in os.listdir(common_path):
+        key = common_file.split('.', 1)[0]
+        with open(os.path.join(common_path, common_file)) as f:
+            data = json.load(f)
+            ret.update({key: data})
+    return ret
+
+
 def _grabdata(_dir, datapaths):
     data = {}
     for category, folder in datapaths.items():
