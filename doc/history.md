@@ -1,3 +1,7 @@
+## 2.84.0
+ * Update minecraft-data to 2.84.0
+ * Add "common" data (thanks sqozz)
+
 ## 2.82.2
  * Update minecraft-data to 2.82.2
  * Update license file
