@@ -10,9 +10,12 @@ def convert(_dir, version, edition ='pc'):
     ret = {}
     for datum in ('recipes', 'materials', 'protocol', 'version',
             'blockCollisionShapes', 'protocolComments', 'loginPacket',
-            'commands', 'tints'):
+            'commands', 'tints', 'blockB2J', 'blocksJ2B'):
         if datum in data:
             ret[datum] = data[datum]
+    if 'blockStates' in data:
+        ret['blockStates'] = _by_name(data['blockStates'])
+        ret['blockStates_list'] = data['blockStates']
     for datum in ('blocks', 'items', 'windows', 'effects', 'particles',
             'biomes', 'instruments', 'enchantments', 'foods', 'mapIcons'):
         if datum in data:
