@@ -20,7 +20,7 @@ setup(
     description='Provide easy access to minecraft data in python',
     license='MIT',
     long_description=open('README.rst').read(),
-    version='2.89.2',
+    version='2.100.0',
     maintainer='Vito Gamberini',
     maintainer_email='vito@gamberini.email',
     url='https://github.com/SpockBotMC/python-minecraft-data',
