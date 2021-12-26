@@ -10,7 +10,7 @@ def convert(_dir, version, edition ='pc'):
     ret = {}
     for datum in ('recipes', 'materials', 'protocol', 'version',
             'blockCollisionShapes', 'protocolComments', 'loginPacket',
-            'commands', 'tints', 'blockB2J', 'blocksJ2B'):
+            'commands', 'tints', 'blockB2J', 'blocksJ2B', 'attributes'):
         if datum in data:
             ret[datum] = data[datum]
     if 'blockStates' in data:
