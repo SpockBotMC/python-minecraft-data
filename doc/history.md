@@ -1,3 +1,7 @@
+## 2.100.0
+ * Update minecraft-data to 2.100.0
+ * Add following data: attributes
+
 ## 2.89.2
  * Update minecraft-data to 2.89.2
  * Add following data: blockStates, blockB2J, blocksJ2B
