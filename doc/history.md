@@ -1,3 +1,6 @@
+## 3.9.1
+ * Update minecraft-data to 3.9.1
+
 ## 2.100.0
  * Update minecraft-data to 2.100.0
  * Add following data: attributes
