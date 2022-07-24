@@ -58,8 +58,10 @@ def commondata(_dir, edition = 'pc'):
 def _grabdata(_dir, datapaths):
     data = {}
     for category, folder in datapaths.items():
-        with open(os.path.join(_dir, folder, f'{category}.json')) as fp:
-            data[category] = json.load(fp)
+        path = os.path.join(_dir, folder, f'{category}.json')
+        if os.path.isfile(path):
+            with open(path) as fp:
+                data[category] = json.load(fp)
     return data
 
 
