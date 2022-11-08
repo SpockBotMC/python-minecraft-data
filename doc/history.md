@@ -1,3 +1,6 @@
+## 3.17.0
+ * Update minecraft-data to 3.17.0
+
 ## 3.9.1
  * Update minecraft-data to 3.9.1
 
