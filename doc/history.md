@@ -1,5 +1,9 @@
+## 3.20.0
+ * Update minecraft-data to 3.20.0
+
 ## 3.17.0
  * Update minecraft-data to 3.17.0
+ * Exclude non-json files from data colation
 
 ## 3.9.1
  * Update minecraft-data to 3.9.1
