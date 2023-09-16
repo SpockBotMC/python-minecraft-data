@@ -1,3 +1,7 @@
+## 3.45.0
+ * Update minecraft-data to 3.45.0
+ * UnicodeDecodeError when loading data for some minecraft versions on windows
+
 ## 3.20.0
  * Update minecraft-data to 3.20.0
 
