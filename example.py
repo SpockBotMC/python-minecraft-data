@@ -1,6 +1,6 @@
 import minecraft_data
 # Java edition minecraft-data
-mcd = minecraft_data("1.13")
+mcd = minecraft_data("1.21.3")
 
 print(mcd.version)
 
@@ -14,7 +14,7 @@ print(mcd.windows['minecraft:brewing_stand'])
 print(mcd.effects_name['Haste'])
 
 # Bedrock Edition minecraft-data
-mcd_pe = minecraft_data("1.0", "bedrock")
+mcd_pe = minecraft_data("1.21.70", "bedrock")
 
 print(mcd_pe.version)
 print(mcd_pe.find_item_or_block('stone'))

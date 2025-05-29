@@ -4,7 +4,7 @@ from glob import glob
 
 
 def convert(_dir, version, edition ='pc'):
-    with open(os.path.join(_dir, 'dataPaths.json')) as f:
+    with open(os.path.join(_dir, 'dataPaths.json'), encoding="utf-8") as f:
         datapaths = json.load(f)
     data = _grabdata(_dir, datapaths[edition][version])
     ret = {}
@@ -49,7 +49,7 @@ def commondata(_dir, edition = 'pc'):
     common_path = os.path.join(_dir, edition, 'common')
     for common_file in os.listdir(common_path):
         key = common_file.split('.', 1)[0]
-        with open(os.path.join(common_path, common_file)) as f:
+        with open(os.path.join(common_path, common_file), encoding="utf-8") as f:
             data = json.load(f)
             ret.update({key: data})
     return ret
@@ -60,7 +60,7 @@ def _grabdata(_dir, datapaths):
     for category, folder in datapaths.items():
         path = os.path.join(_dir, folder, f'{category}.json')
         if os.path.isfile(path):
-            with open(path) as fp:
+            with open(path, encoding="utf-8") as fp:
                 data[category] = json.load(fp)
     return data
 
